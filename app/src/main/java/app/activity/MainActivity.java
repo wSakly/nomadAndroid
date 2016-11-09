@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 callLoginservice.enqueue(new Callback<List<Event>>() {
                     @Override
                     public void onResponse(Call<List<Event>> call, Response<List<Event>> response) {
-                        Log.d("test","the data event is "+ response.body().toString());
                         mCardAdapter.updateItem(response.body());
                         mCardAdapter.notifyDataSetChanged();
                     }
